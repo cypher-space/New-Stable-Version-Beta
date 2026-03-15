@@ -191,7 +191,7 @@ onMounted(async () => {
       key: `feed:${skHex}`,
       relays: setup.relays,
       filter: { kinds: [1], authors: [skHex], limit: 40 },
-      ttlMs: 30_000,
+      ttlMs: 120_000,
       timeoutMs: 10_000,
     });
 

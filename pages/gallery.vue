@@ -315,7 +315,7 @@ onMounted(async () => {
       key: `gallery:${skHex}`,
       relays: setup.relays,
       filter: { kinds: [20], authors: [skHex], limit: 60 },
-      ttlMs: 60_000,
+      ttlMs: 300_000,
       timeoutMs: 10_000,
     });
 

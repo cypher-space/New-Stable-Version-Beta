@@ -43,7 +43,7 @@ const fetchEvents = async (pageNumber) => {
       key: `longform:${skHex}`,
       relays: setup.relays,
       filter: { kinds: [30023], authors: [skHex], limit: 30 },
-      ttlMs: 60_000,
+      ttlMs: 300_000,
       timeoutMs: 10_000,
     });
 

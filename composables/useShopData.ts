@@ -23,7 +23,7 @@ type ShopProduct = {
 };
 
 const PRODUCTS_KEY = "shop:products:30402";
-const PRODUCTS_TTL_MS = 120_000;
+const PRODUCTS_TTL_MS = 300_000;
 
 const normalizeCategory = (value: string) => {
   if (value === "Food") return "Food & Drink";
