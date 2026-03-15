@@ -1,0 +1,24 @@
+[
+   {
+      "id": 1,
+      "category": [
+              ],
+      "variations": [
+      ],
+      "title": "T-Shirt #1",
+      "description": "This is a demo product.",
+      "fulldescription": "<h1>The First Shirt </h1>    <p>This classic cotton T-shirt is a staple for any wardrobe. Made from 100% organic cotton, it offers both comfort and durability. Available in multiple colors, this tee is perfect for any casual occasion.</p>      ",
+      "stock": 10,
+      "inStock": true,
+      "price": 0.00000840,
+      "shipprice": 0.00000001,
+      "images": [
+         {
+         }
+
+      ],
+      "features": [
+
+      ]
+   }
+]

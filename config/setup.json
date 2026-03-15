@@ -1,0 +1,66 @@
+{
+  "version": "1.0.2 Beta",
+  "initsetup": true,
+  "maintenancemode": false,
+  "nostradmin": "npub1equrmqway3qxw3dkssymusxkwgwrqypfgeqx0lx9pgjam7gnj4ysaqhkj6",
+  "relays": [
+    "wss://nos.lol",
+    "wss://nostr.mom",
+    "wss://atlas.nostr.land",
+    "wss://relay.damus.io",
+    "wss://relay.ditto.pub"
+  ],
+  "nostrInboxRelays": [
+    "wss://nos.lol",
+    "wss://relay.damus.io",
+    "wss://atlas.nostr.land",
+    "wss://relay.ditto.pub"
+  ],
+  "name": "Cypher Shop",
+  "tagline": "Nostr & Bitcoin Website",
+  "textlogo": "CYPHER",
+  "logo": false,
+  "logoimage": "NG_Logo_CypherSpace.gif",
+  "logodark": false,
+  "logodarkimage": "NG_Logo_CypherSpace_Dark.gif",
+  "multilang": true,
+  "defaultlanguage": "en",
+  "blog": true,
+  "shop": true,
+  "shopsource": "hybrid",
+  "contact": true,
+  "cart": "latest",
+  "checkout": "full",
+  "localid": "Name / Handle",
+  "basecurrency": "btc",
+  "lightningonly": true,
+  "fiat": {
+    "default": "GBP",
+    "denomination": "GBP",
+    "symbol": "£"
+  },
+  "testnet": false,
+  "btcadress": "",
+  "lightningaddress": "sync@lightning.eu",
+  "orderwebhook": "",
+  "nostr": true,
+  "footerlanguage": false,
+  "footersocials": true,
+  "footertheme": true,
+  "contactdetails": {
+    "line1": "Nostr: npub1equrmqway3qxw3dkssymusxkwgwrqypfgeqx0lx9pgjam7gnj4ysaqhkj6",
+    "line2": "Email: sync@cypher.space",
+    "line3": ""
+  },
+  "socialnavigation": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": "",
+    "github": "",
+    "discord": "",
+    "dribble": "",
+    "linkedin": "",
+    "telegram": "",
+    "nostr": ""
+  }
+}

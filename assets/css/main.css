@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
+}
+
+:root {
+  --farm-bg: #f4f4f4;
+  --farm-surface: #e6e6e6;
+  --farm-ink: #141414;
+  --farm-soil: #2f2f2f;
+  --farm-leaf: #7a7a7a;
+  --farm-berry: #242424;
+  --farm-honey: #bdbdbd;
+  --farm-border: #c8c8c8;
+  --farm-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.dark {
+  --farm-bg: #0d0d0d;
+  --farm-surface: #171717;
+  --farm-ink: #f3f3f3;
+  --farm-soil: #d8d8d8;
+  --farm-leaf: #9b9b9b;
+  --farm-berry: #f0f0f0;
+  --farm-honey: #8a8a8a;
+  --farm-border: #303030;
+  --farm-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+}
+
+.farm-grain-bg {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.3),
+      transparent 45%
+    ),
+    radial-gradient(circle at 80% 5%, rgba(0, 0, 0, 0.12), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.08), transparent 48%),
+    var(--farm-bg);
+}
+
+.dark .farm-grain-bg {
+  background:
+    radial-gradient(
+      circle at 18% 16%,
+      rgba(255, 255, 255, 0.1),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 84% 10%,
+      rgba(180, 180, 180, 0.1),
+      transparent 44%
+    ),
+    radial-gradient(circle at 55% 90%, rgba(80, 80, 80, 0.14), transparent 48%),
+    linear-gradient(180deg, #0d0d0d 0%, #121212 40%, #1a1a1a 100%);
+}
+
+.farm-panel {
+  background: var(--farm-surface);
+  border: 1px solid var(--farm-border);
+  border-radius: 1rem;
+  box-shadow: var(--farm-shadow);
+}
+
+.farm-chip {
+  border: 1px solid var(--farm-border);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--farm-surface) 85%, #ffffff 15%);
+  color: var(--farm-ink);
+  transition: all 180ms ease;
+}
+
+.farm-chip:hover {
+  border-color: var(--farm-soil);
+  transform: translateY(-1px);
+}
+
+.farm-chip-active {
+  background: color-mix(in srgb, var(--farm-leaf) 15%, var(--farm-surface) 85%);
+  border-color: var(--farm-leaf);
+  color: var(--farm-ink);
+}
+
+.farm-card {
+  border: 1px solid var(--farm-border);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--farm-surface) 74%, #ffffff 26%);
+  box-shadow: var(--farm-shadow);
+  overflow: hidden;
+}
+
+.farm-label-strip {
+  border-top: 1px dashed var(--farm-border);
+  background: color-mix(in srgb, var(--farm-surface) 90%, #ffffff 10%);
+}
+
+.farm-status-note {
+  border-radius: 0.75rem;
+  border: 1px solid var(--farm-border);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.farm-status-note--pending {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 0, 0, 0.18);
+  color: #2a2a2a;
+}
+
+.farm-status-note--success {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.22);
+  color: #202020;
+}
+
+.farm-status-note--fallback {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.16);
+  color: #3a3a3a;
+}
+
+.farm-status-note--error {
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.3);
+  color: #111111;
+}
+
+body {
+  color: var(--farm-ink);
+  font-family:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.farm-title {
+  color: var(--farm-ink);
+  letter-spacing: -0.015em;
+}
+
+.farm-subtitle {
+  color: var(--farm-soil);
+}
+
+.farm-button-primary {
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--farm-soil) 70%, #000000 30%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--farm-soil) 88%, #ffffff 12%),
+    color-mix(in srgb, var(--farm-soil) 96%, #000000 4%)
+  );
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.farm-button-primary:hover {
+  filter: brightness(1.03);
+}
+
+.farm-link-secondary {
+  border-radius: 0.75rem;
+  border: 1px solid var(--farm-border);
+  background: color-mix(in srgb, var(--farm-surface) 86%, #ffffff 14%);
+  color: var(--farm-ink);
+  padding: 0.625rem 0.9rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.farm-link-secondary:hover {
+  border-color: var(--farm-soil);
+  color: var(--farm-soil);
+}
+
+.farm-input {
+  border-radius: 0.65rem;
+  border: 1px solid var(--farm-border);
+  background: color-mix(in srgb, var(--farm-surface) 82%, #ffffff 18%);
+  color: var(--farm-ink);
+}
+
+.farm-input::placeholder {
+  color: color-mix(in srgb, var(--farm-soil) 60%, #ffffff 40%);
+}
+
+.farm-prose {
+  color: var(--farm-ink);
+}
+
+.farm-prose :where(h1, h2, h3, h4, h5, h6) {
+  color: var(--farm-ink);
+}
+
+.farm-prose :where(p, li, blockquote, strong, em, a) {
+  color: color-mix(in srgb, var(--farm-ink) 88%, var(--farm-soil) 12%);
+}
+
+.farm-prose :where(code, pre) {
+  background: color-mix(in srgb, var(--farm-surface) 82%, #000000 18%);
+  color: var(--farm-ink);
+}
+
+.farm-prose :where(hr) {
+  border-color: var(--farm-border);
+}
+
+.farm-checkout-shell {
+  background: var(--farm-bg);
+}
+
+.farm-checkout-card {
+  background: var(--farm-surface);
+  border: 1px solid var(--farm-border);
+  border-radius: 1rem;
+  box-shadow: var(--farm-shadow);
+}
+
+.farm-checkout-section {
+  background: color-mix(in srgb, var(--farm-surface) 88%, #ffffff 12%);
+  border: 1px solid var(--farm-border);
+  border-radius: 1rem;
+}
+
+.farm-remove-link {
+  color: var(--farm-berry);
+}
+
+.farm-remove-link:hover {
+  filter: brightness(0.9);
+}
+
+.farm-checkout-shell .text-gray-900 {
+  color: var(--farm-ink) !important;
+}
+
+.farm-checkout-shell .text-gray-700 {
+  color: color-mix(
+    in srgb,
+    var(--farm-ink) 82%,
+    var(--farm-soil) 18%
+  ) !important;
+}
+
+.farm-checkout-shell .text-gray-500 {
+  color: var(--farm-soil) !important;
+}
+
+.farm-checkout-shell .text-indigo-600 {
+  color: var(--farm-soil) !important;
+}
+
+.farm-checkout-shell .dark\:text-white {
+  color: var(--farm-ink) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .farm-chip,
+  .farm-card,
+  .farm-button-primary,
+  .farm-link-secondary {
+    transition: none;
+  }
+}
